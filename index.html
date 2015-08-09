@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Crowd Fund</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/app.css" media="screen">
+    </head>
+    <body ng-app="crowdfund" ng-controller="AppController">
+        <h1>{{campaignName.$value}}</h1>
+        <div class="overview col-lg-6">
+            <img ng-src="girlchild.jpg" alt="" />
+            <div class="description">
+                {{description}}
+            </div>
+        </div>
+        <div class="status col-lg-6" ng-controller="StatusController">
+            <div class="goal">
+                <div class="funds">
+                    <span>${{amountRaised.$value}}</span>
+                </div>
+                <div class="numPeople">
+                    <span>raised by {{numPeople.$value}} people in 1 month</span>
+                </div>
+            </div>
+            <div class="contribute" ng-controller="ContributeController">
+                    <h2>Contribute</h2>
+                    <div class="contrib" ng-repeat="amount in contribs"><button class="btn btn-default" ng-click="contribute(amount)">{{amount}}</button></div>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+        <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+        <script src="https://cdn.firebase.com/libs/angularfire/1.1.2/angularfire.min.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>
