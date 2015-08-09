@@ -6,13 +6,16 @@
     </head>
     <body ng-app="crowdfund" ng-controller="AppController">
         <h1>{{campaignName.$value}}</h1>
-        <div class="overview col-lg-6">
-            <img ng-src="girlchild.jpg" alt="" />
+        <div class="overview col-sm-12 col-md-8 col-lg-8">
+            <img ng-src="children.jpg" alt="" />
+            <div class="tagline">
+                <span><strong>{{tagline.$value}}</strong></span>
+            </div>
             <div class="description">
-                {{description}}
+                <span>{{description.$value}}</span>
             </div>
         </div>
-        <div class="status col-lg-6" ng-controller="StatusController">
+        <div class="status col-sm-12 col-md-4 col-lg-4" ng-controller="StatusController">
             <div class="goal">
                 <div class="funds">
                     <span>${{amountRaised.$value}}</span>

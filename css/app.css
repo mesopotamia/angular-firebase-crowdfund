@@ -4,3 +4,13 @@
 .contrib {
     margin-bottom: 5px;
 }
+.tagline {
+    margin: 5px 0;
+}
+.overview {
+    margin-bottom: 10px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
