@@ -5,8 +5,14 @@
         <link rel="stylesheet" href="/css/app.css" media="screen">
     </head>
     <body ng-app="crowdfund" ng-controller="AppController">
+        <header class="col-sm-12 col-md-8 col-lg-8">
         <h1>{{campaignName.$value}}</h1>
+        <div class="disclaimer">
+            Please note this is not a real campaign, but more of a technical demo for how firebase and angular work together. If you wish, you can conribute to the <a href="https://www.indiegogo.com/projects/global-learning-xprize#/story">real cause</a>.
+        </div>
+        </header>
         <div class="overview col-sm-12 col-md-8 col-lg-8">
+
             <img ng-src="children.jpg" alt="" />
             <div class="tagline">
                 <span><strong>{{tagline.$value}}</strong></span>

@@ -26,17 +26,8 @@ angular.module('crowdfund', ['firebase'])
         $firebaseObject(campaign.child('numPeople')).$bindTo($scope, 'numPeople');
 
         $scope.contribute = function (amount) {
-            console.log(amount);
             $scope.amountRaised.$value += amount;
             $scope.numPeople.$value += 1;
-            // $firebaseObject(campaign.child('amountRaised')).$loaded().then(function(data){
-            //     data.$value += amount;
-            //     data.$save();
-            // });
-            // $firebaseObject(campaign.child('numPeople')).$loaded().then(function(data){
-            //     data.$value += 1;
-            //     data.$save();
-            // });
         };
 
     }])
